@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+    <header 
+        android:fragment="com.example.libraryscanner.fragment1"
+        android:title="Webside"
+        android:summary="Definer start webside" />
+    <header 
+        android:fragment="com.example.libraryscanner.fragment2"
+        android:title="Scanmetode"
+        android:summary="Definer metode til af finde materialenr." >
+        <!-- key/value pairs can be included as arguments for the fragment. -->
+        <extra android:name="someKey" android:value="someHeaderValue" />
+    </header>
+</preference-headers>

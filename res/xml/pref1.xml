@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory
+        android:title="Website"
+        android:key="Webside">
+ 
+        <EditTextPreference
+            android:key="websitechoice"
+            android:title="Webside"
+            android:summary="Skriv start webside"
+            android:dialogTitle="webside"
+            android:dialogMessage="Definer webside"   
+            android:defaultValue="www.dr.dk" />
+ 
+    </PreferenceCategory>
+    
+    
+ 
+    
+
+ 
+    
+
+     
+    
+
+</PreferenceScreen>

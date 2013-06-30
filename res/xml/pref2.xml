@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    
+    <PreferenceCategory
+        android:title="Scan metode"
+        android:key="second_category">
+         
+        <CheckBoxPreference
+            android:key="perform_updates"
+            android:summary="Interval eller identificering - checked lig interval"
+            android:title="Identifikationsmetode"
+            android:defaultValue="true"
+        />
+         
+        <ListPreference
+            android:key="updates_interval"
+            android:title="Updates interval"
+            android:summary="Define how often updates will be performed"
+            android:defaultValue="1000"
+            android:entries="@array/updateInterval"
+            android:entryValues="@array/updateIntervalValues"
+            android:dependency="perform_updates"
+        />   
+             
+    </PreferenceCategory>
+ 
+    
+
+ 
+    
+
+     
+    
+
+</PreferenceScreen>
