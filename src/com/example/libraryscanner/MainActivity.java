@@ -182,6 +182,7 @@ public class MainActivity extends Activity {
 			case (MotionEvent.ACTION_UP): // Touch screen touch ended
 				xup = event.getX();
    				yup = event.getY();
+   				Log.i("MyActivity", "xup" + xup);
    				
    				
    				break;
@@ -198,6 +199,9 @@ public class MainActivity extends Activity {
     		if (difx>dify && xdown<200 && xup>400){
     			xdown=500;
     			ydown=500;
+    			xup=0;
+    			yup=0;
+    			
     			Intent intent = new Intent(MainActivity.this, Settings.class);
     			Log.i("MyActivity", "start intent");
     			Bundle bndlanimation =	ActivityOptions.makeCustomAnimation(getApplicationContext(), R.anim.animationin,R.anim.animationout).toBundle();
