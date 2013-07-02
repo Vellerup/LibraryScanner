@@ -11,4 +11,11 @@
         <!-- key/value pairs can be included as arguments for the fragment. -->
         <extra android:name="someKey" android:value="someHeaderValue" />
     </header>
+    <header 
+        android:fragment="com.example.libraryscanner.fragmentabout"
+        android:title="Om"
+        android:summary="Om" >
+        <!-- key/value pairs can be included as arguments for the fragment. -->
+        <extra android:name="someKey" android:value="someHeaderValue" />
+    </header>
 </preference-headers>

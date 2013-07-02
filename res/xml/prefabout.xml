@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <Preference android:key="about"
+        android:title="Om Libraryscan"
+        android:summary="Version 0.50 \nLibraryscan er et værktøj udviklet på hobbybasis af medarbejdere i 
+ITK, Aarhus Kommunes Biblioter. Formålet er, at identificere materialenummeret og indsætte det i en tekstbox på en hjemmeside. Såfremt værktøjet kan bruges, kan der udvikles et reelt gennemtestet program"
+        >
+        	<intent 
+        	    android:action="android.intent.acion.VIEW"
+        	    android:targetPackage="com.example.libraryscanner"
+        	    android:targetClass="com.example.libraryscanner.Aboutactivity"
+        	    
+        	    />
+        	
+    </Preference>
+
+</PreferenceScreen>

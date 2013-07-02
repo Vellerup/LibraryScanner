@@ -27,15 +27,18 @@ public final class R {
         public static final int menu_settings=0x7f0a0000;
     }
     public static final class layout {
-        public static final int activity_main=0x7f030000;
+        public static final int activity_aboutactivity=0x7f030000;
+        public static final int activity_main=0x7f030001;
     }
     public static final class menu {
-        public static final int activity_main=0x7f090000;
+        public static final int activity_aboutactivity=0x7f090000;
+        public static final int activity_main=0x7f090001;
     }
     public static final class string {
         public static final int app_name=0x7f070000;
         public static final int hello_world=0x7f070001;
         public static final int menu_settings=0x7f070002;
+        public static final int title_activity_aboutactivity=0x7f070003;
     }
     public static final class style {
         /** 
@@ -70,5 +73,6 @@ public final class R {
         public static final int nfc_tech_filter=0x7f050001;
         public static final int pref1=0x7f050002;
         public static final int pref2=0x7f050003;
+        public static final int prefabout=0x7f050004;
     }
 }
