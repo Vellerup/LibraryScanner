@@ -137,13 +137,21 @@ public class MainActivity extends Activity {
 		
 		// Get basic tag information.
 		//byte[] info = book.getInfo();
+		SharedPreferences prefs1 = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+		String substartStr = prefs1.getString("startSub", "2");
+		int substart = Integer.parseInt(substartStr);
+		String subslutStr = prefs1.getString("slutSub", "14");
+		int subslut = Integer.parseInt(subslutStr);
 		
-
 
 		// Set pay-load text.
 		//TextView payloadText = (TextView) findViewById(R.id.payloadText);
 		String output = book.readBlocksAsString((byte)0, (byte)12);
-		simulateKey(output.substring(0, 14));
+		Log.i("NFC", "outputraw = " + output);
+		
+		String outputCutted = output.substring(substart, subslut);
+		Log.i("NFC", "outputCutted = " + outputCutted);
+		simulateKey(outputCutted);
 		//payloadText.setText(output.substring(0, 14));
 		//String substr=mysourcestring.subString(startIndex,endIndex);
 		
@@ -220,16 +228,17 @@ public class MainActivity extends Activity {
 		   this.getSettings().setJavaScriptEnabled(true);
 		   HelloWebViewClient client = new HelloWebViewClient();
 		   this.setWebViewClient(client);
-		   //String test = prefs.getString(websitechoice, "www.aakb.dk");
-		   //test = prefs.getString(ACTIVITY_SERVICE, defValue)
 		   this.loader();
-		   //this.loadUrl(url);
+		   
 		  }
 		  public void loader(){
 			  SharedPreferences prefs2 = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-			   String url2 = prefs2.getString("websitechoice", "www.dr.dk");
-			   
-			   Log.i("URL","Her " + url2);
+			   String url2 = prefs2.getString("websitechoice", "http://www.dr.dk/");
+			   			   
+			   if (url2.substring(0, 3).equals("www")){
+				   url2= "http://" + url2;
+			   }
+			   Log.i("URL","Loader " + url2);
 			   
 			   this.loadUrl(url2);
 			  

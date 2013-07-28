@@ -8,20 +8,26 @@
          
         <CheckBoxPreference
             android:key="perform_updates"
-            android:summary="Interval eller identificering - checked lig interval"
+            android:summary="Interval eller identificering - checked lig interval - ikke i brug"
             android:title="Identifikationsmetode"
             android:defaultValue="true"
         />
-         
-        <ListPreference
-            android:key="updates_interval"
-            android:title="Updates interval"
-            android:summary="Define how often updates will be performed"
-            android:defaultValue="1000"
-            android:entries="@array/updateInterval"
-            android:entryValues="@array/updateIntervalValues"
-            android:dependency="perform_updates"
-        />   
+        <EditTextPreference
+            android:key="startSub"
+            android:title="NFC Outout start sted"
+            android:summary="Angiv materialenummerets startsted"
+            android:dialogTitle="Startnr"
+            android:dialogMessage="Skriv hvor matnr starter"   
+            android:defaultValue="2" />
+        <EditTextPreference
+            android:key="slutSub"
+            android:title="NFC Outout slut sted"
+            android:summary="Angiv materialenummerets slutsted"
+            android:dialogTitle="Slut"
+            android:dialogMessage="Skriv Slut"   
+            android:defaultValue="14" />
+        
+          
              
     </PreferenceCategory>
  
